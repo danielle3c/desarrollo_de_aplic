@@ -38,13 +38,17 @@ function realizarOperaciones() {
 
 // Ejercicio 4: Manipulación de cadenas
 function manipularCadenas() {
+    let direccion = prompt("Ingrese su dirección:");
+    let n_casa = prompt("Ingrese su número de casa:");
+    let direccioncompleta = direccion + " " + n_casa;
 
-        let direccion = prompt("Ingrese su dirección:");
-        let n_casa = prompt("Ingrese su número de casa:");
-        let direccioncompleta = direccion + " " + n_casa;
-        let mensaje = "La dirección es " + direccion + " número " + n_casa;
-    
-        alert(mensaje); // Muestra el mensaje en una alerta
-    }
+    let longitudMensaje = direccioncompleta.length;
+    let antepenultimoCaracter = direccioncompleta.charAt(longitudMensaje - 3); // Obtiene el antepenúltimo carácter
+
+    alert("La dirección es: " + direccioncompleta + 
+        "\nCantidad de caracteres: " + longitudMensaje + 
+        "\nCarácter antepenúltimo: " + antepenultimoCaracter);
+}
+
     
 
