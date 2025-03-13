@@ -43,7 +43,7 @@ function manipularCadenas() {
     let direccioncompleta = direccion + " " + n_casa;
 
     let longitudMensaje = direccioncompleta.length;
-    let antepenultimoCaracter = direccioncompleta.charAt(longitudMensaje - 3); // Obtiene el antepenúltimo carácter
+    let antepenultimoCaracter = direccioncompleta[direccioncompleta.length - 3]
 
     alert("La dirección es: " + direccioncompleta + 
         "\nCantidad de caracteres: " + longitudMensaje + 
