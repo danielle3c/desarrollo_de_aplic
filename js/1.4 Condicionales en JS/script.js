@@ -27,6 +27,28 @@ function temperatura() {
         }
     }
 
+    function determinar_signo() {
+        let numero = parseInt(prompt("Introduce un número"));
+    
+        if (numero < 0) {
+            alert("El número es negativo");
+        } else if (numero > 0) {
+            alert("El número es positivo");
+        } else {
+            alert("El número es cero");
+        }
+    }
+
+    function evaluacion_puntaje() {
+        let puntuacion = parseInt(prompt("Introduce tu puntuación:"));
+        if (puntuacion >= 90) {
+            alert("Excelente");
+        } else if (puntuacion >= 70 && puntuacion < 90) {
+            alert("Buen trabajo");
+        } else {
+            alert("Necesitas mejorar");
+        }
+    }
     
 
 
