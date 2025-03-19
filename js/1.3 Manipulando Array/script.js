@@ -2,12 +2,9 @@ console.log("Funcionando correctamente...");
 
 
 function Suma_indices() {
-    const arreglo = [1, 2, 3, 4, 5, 6, 7];
-    const primerValor = arreglo[0];
-    const penultimoValor = arreglo[arreglo.length - 2];
-    const ultimoValor = arreglo[arreglo.length - 1];
-    const resultado = ultimoValor + penultimoValor + primerValor;
-    alert("El resultado de la suma es: " + resultado);
+    let Array = [1, 2, 3, 4, 5, 6, 7];
+    let suma = Array[0] + Array[1] + Array[2] + Array[3] + Array[4] + Array[5] + Array[6];
+    alert(`El arreglo es: ${Array.join("-")}\nResultado: ${suma}`);
 }
 
 
