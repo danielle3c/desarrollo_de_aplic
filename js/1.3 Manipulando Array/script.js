@@ -9,14 +9,11 @@ function Suma_indices() {
 
 
 function Producto_pares() {
-    const arreglo = [2, 4, 6, 8, 10, 12];
-    let producto = 1;
-
-
-    for (let i = 0; i < arreglo.length; i++) {
-        producto *= arreglo[i];
-    }
-
-    alert("El producto de los valores pares es: " + producto);
+    let arreglo = [2, 4, 6, 8, 10, 12];
+    let producto = arreglo[0] * arreglo[1] * 
+    arreglo[2] * arreglo[3] * 
+    arreglo[4] * arreglo[5];
+    alert(`El array es: ${arreglo.join("_")}\nEl producto de los valores pares es: ${producto}`);
 }
+
 
