@@ -12,4 +12,15 @@ if (edad >= 18 && aceptarterminos === "si"){
 }
 
 
+function elegibilidad_para_descuento() {
+    let edad = parseInt(prompt("intoduce tu edad"));
+    let estudiente = prompt("eres estudiante? si/no");
+    if (edad <= 18 || edad >= 35 || estudiente === "si") {
+        alert("tiene derecho a descuento");
+    } else { 
+        alert("no tiene derecho a descuento");
+    }
+}
+
+
 
