@@ -1,17 +1,15 @@
 console.log("Funcionando correctamente...");
 function temperatura() {
-    let temperatura = parseInt(prompt("introduce la temaperatura actual en grado celcius."));
-    if (temperatura <0) {
-        alert("hace mucho frio");
-    }
-    if (temperatura >=0 && temperatura <25) {
-        alert("esta agradable el clima");
+    let temperatura = parseInt(prompt("Introduce la temperatura actual en grados Celsius."));
+
+    if (temperatura < 0) {
+        alert("Hace mucho frío");
+    } else if (temperatura >= 0 && temperatura < 25) {
+        alert("Está agradable el clima");
     } else {
-        alert ("hace mucho calor");
+        alert("Hace mucho calor");
     }
-    
-        alert("esta agradable el clima");
-    }
+}
 
     function verificacion() {
         let usuario = "usuario123";
@@ -50,5 +48,4 @@ function temperatura() {
         }
     }
     
-
 
