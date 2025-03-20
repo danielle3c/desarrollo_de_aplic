@@ -23,4 +23,21 @@ function elegibilidad_para_descuento() {
 }
 
 
+function validacion_usuario_con_not() {
+    let usuario = prompt("introduce tu usuario");
+    let contraseña = prompt("intoduce tu contraseña");
+    if (usuario !== "usuario" || contraseña !== "contraseña") {
+        alert ("acceso concedido");
+    } else {
+        alert("acceso denegado");
+        
+    }
+}
+
+
+function acceso_restrigido_estado_seriguridad(){
+    
+}
+
+
 
