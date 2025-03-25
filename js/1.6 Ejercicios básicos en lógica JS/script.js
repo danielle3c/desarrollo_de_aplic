@@ -16,8 +16,8 @@ function Par_o_Impar() {
 }
 
 function calcula_indice_corporal() {
-    let peso = parseFloat(prompt("Introduce tu peso en kg"));
-    let altura = parseFloat(prompt("Introduce tu altura en metros"));
+    let peso = parseFloat(prompt("Introduce tu peso "));
+    let altura = parseFloat(prompt("Introduce tu altura"));
     
     if (isNaN(peso) || isNaN(altura) || altura <= 0) {
         alert("Por favor, introduce valores válidos.");
