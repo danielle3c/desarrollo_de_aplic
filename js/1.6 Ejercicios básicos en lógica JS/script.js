@@ -1,6 +1,6 @@
 console.log("Funcionando correctamente...");
 
-function Par_o_Impar() { 
+function Par_o_Impar() {
     let numero = parseInt(prompt("Introduce un número"));
 
     if (isNaN(numero)) {
@@ -19,9 +19,9 @@ function calcula_indice_corporal() {
     let peso = parseFloat(prompt("Introduce tu peso "));
     let altura = parseFloat(prompt("Introduce tu altura"
 
-        
+
     ));
-    
+
     if (isNaN(peso) || isNaN(altura) || altura <= 0) {
         alert("Por favor, introduce valores válidos.");
         return;
@@ -40,15 +40,14 @@ function calcula_indice_corporal() {
 }
 
 
-function calculadora_de_notas (){
+function calculadora_de_notas() {
     let nota1 = parseFloat(prompt("introduce la primera nota"));
     let nota2 = parseFloat(prompt("introduce la segunda nota"));
     let nota3 = parseFloat(prompt("introduce la tercera nota"));
-    let promedio = (nota1 + nota2 +nota3) / 3;
+    let promedio = (nota1 + nota2 + nota3) / 3;
     if (promedio >= 4.0) {
-        alert ("aprobado");
-    }else 
-{
-    alert ("reprobado");
+        alert("aprobado");
+    } else {
+        alert("reprobado");
     }
 }
