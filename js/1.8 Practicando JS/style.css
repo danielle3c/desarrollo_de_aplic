@@ -1,0 +1,119 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+/* NAV */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f39c12;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+    text-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
+}
+
+/* Mostrar container y container2 uno al lado del otro */
+body > section.container,
+body > section.container2 {
+    display: inline-block;
+    vertical-align: auto;
+    width: 45%;
+    margin: 20px 2.5%;
+}
+
+
+/* Estilos específicos container */
+.container {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #f39c12;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.container button {
+    padding: 15px 30px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #f39c12;
+    color: #1e1e1e;
+    transform: scale(1.1);
+}
+
+/* Estilos específicos container2 */
+.container2 {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.container2 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #00cec9;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.container2 button {
+    padding: 15px 30px;
+    background-color: #00cec9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container2 button:hover {
+    background-color: #0984e3;
+    color: #fff;
+    transform: scale(1.1);
+}
