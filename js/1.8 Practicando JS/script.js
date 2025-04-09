@@ -1,5 +1,19 @@
+    //ejercios1
+    function calcular_suma_de_n_primeros_numeros_naturales(){
+        let n = parseInt(prompt("ingrese un numero"));
+        let numeros = [];
+        let suma = 0 ;
+        for (let i = 1; i <= n; i++){
+            numeros.push(i);
+            suma += i;
+        }
+        alert(`La suma de los primeros ${n} numeros es: ${suma}`);
+        alert(`Los numeros son: ${numeros.join(", ")}`); //muestra los numeros en un solo mensaje
+        
+    }
+    
     //ejercicio 2:
-function MostrarPares() {
+function escribir_100_primeros_numeros_pares(){
     let array = [];
     for(let n = 1; n <= 200; n++){
         if(n % 2 == 0){
@@ -11,7 +25,7 @@ function MostrarPares() {
 
 
 //ejercicio 3:
-    function Mostrarimpares() {
+    function escribir_100_primeros_numeros_impares(){
         let array = []; 
         for(let n = 1; n <= 200; n++){ //genera un bucle que llega hasta 200
             if(n % 2 == 1){ 
@@ -21,7 +35,24 @@ function MostrarPares() {
         alert(`Los primero 100 numeros impares son:\n ${array.join(" - ")}`);
     }
     
-    
+    //ejercios 4:
+    function sumar_5_numeros_leidos_teclado(){
+        let numeros = [];
+        let cantidad = 5;
+        let suma = 0;
+        for (let i = 0; i < cantidad; i++){
+            let num = parseInt(prompt(`Ingrese el número ${i + 1} de ${cantidad}: `)); //validar que sea un numero
+            while(isNaN(num)){ //validar que sea un numero
+                alert("El valor ingresado no es un número válido. Intente nuevamente.");
+                num = parseInt(prompt(`Ingrese el número ${i + 1} de ${cantidad}: `)); //validar que sea un numero
+            }
+            numeros.push(num); //agregar el numero al array
+            suma += num; //sumar los numeros
+        }
+        alert(`Los números ingresados son: ${numeros.join(", ")}`); //muestra los numeros en un solo mensaje    
+        alert (`La suma de los números es: ${suma}`); //muestra la suma de los numeros
+        
+    }
     
     
     
