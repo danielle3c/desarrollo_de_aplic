@@ -1,22 +1,26 @@
-    //ejercios1
-    function calcular_suma_de_n_primeros_numeros_naturales(){
-        let n = parseInt(prompt("ingrese un numero"));
-        let numeros = [];
-        let suma = 0 ;
-        for (let i = 1; i <= n; i++){
-            numeros.push(i);
-            suma += i;
-        }
-        alert(`La suma de los primeros ${n} numeros es: ${suma}`);
-        alert(`Los numeros son: ${numeros.join(", ")}`); //muestra los numeros en un solo mensaje
-        
-    }
-    
-    //ejercicio 2:
-function escribir_100_primeros_numeros_pares(){
+//creacion de variables
+console.log("todo bien");
+
+
+//ejercicio 1:
+function calcular_suma_de_n_primeros_numeros_naturales() {
+    let n = parseInt(prompt("Ingrese un numero:"));
     let array = [];
-    for(let n = 1; n <= 200; n++){
-        if(n % 2 == 0){
+    let suma = 0;
+    for (let i = 1; i <= n; i++) {
+        array.push(i);
+        suma += i;
+    }
+    alert(`La suma de los primeros ${n} numeros naturales es:\n ${suma}`);
+    alert(`Los primeros ${n} numeros naturales son:\n ${array.join(" -")}`);
+}
+
+
+//ejercicio 2:
+function escribir_100_primeros_numeros_pares() {
+    let array = [];
+    for (let n = 1; n <= 200; n++) {
+        if (n % 2 == 0) {
             array.push(n);
         }
     }
@@ -25,53 +29,244 @@ function escribir_100_primeros_numeros_pares(){
 
 
 //ejercicio 3:
-    function escribir_100_primeros_numeros_impares(){
-        let array = []; 
-        for(let n = 1; n <= 200; n++){ //genera un bucle que llega hasta 200
-            if(n % 2 == 1){ 
-                array.push(n);  
-            } 
+function escribir_100_primeros_numeros_impares() {
+    let array = [];
+    for (let n = 1; n <= 200; n++) { //genera un bucle que llega hasta 200
+        if (n % 2 == 1) {
+            array.push(n);
         }
-        alert(`Los primero 100 numeros impares son:\n ${array.join(" - ")}`);
     }
-    
-    //ejercios 4:
-    function sumar_5_numeros_leidos_teclado(){
-        let numeros = [];
-        let cantidad = 5;
-        let suma = 0;
-        for (let i = 0; i < cantidad; i++){
-            let num = parseInt(prompt(`Ingrese el número ${i + 1} de ${cantidad}: `)); //validar que sea un numero
-            while(isNaN(num)){ //validar que sea un numero
-                alert("El valor ingresado no es un número válido. Intente nuevamente.");
-                num = parseInt(prompt(`Ingrese el número ${i + 1} de ${cantidad}: `)); //validar que sea un numero
+    alert(`Los primero 100 numeros impares son:\n ${array.join(" - ")}`);
+}
+
+
+//ejercicio 4: 
+function sumar_5_numeros_leidos_teclado() {
+    let array = [];
+    let suma = 0;
+    let cantidad = 5;
+
+    for (let i = 0; i < cantidad; i++) {
+        let num = parseInt(prompt(`Ingrese el número ${i + 1}:`));
+
+        while (!(typeof num === 'number' && !Number.isNaN(num))) {
+            num = parseInt(prompt(`Entrada inválida. Ingrese el número ${i + 1} nuevamente:`));
+        }
+
+        array.push(num);
+        suma += num;
+    }
+
+    alert(`La suma de los 5 números es: ${suma}\nNúmeros ingresados: ${array.join(" - ")}`);
+}
+
+
+//ejercicio 5:
+function modificar_anterior_permita_sumar_n_numeros() {
+    let n = parseInt(prompt("¿Cuántos números desea sumar?"));
+    while (isNaN(n) || n <= 0) {
+        n = parseInt(prompt("Entrada inválida. Ingrese un número mayor a 0:"));
+    }
+    let array = [];
+    let suma = 0;
+    for (let i = 0; i < n; i++) {
+        let num = parseInt(prompt(`Ingrese el número ${i + 1}:`));
+        while (isNaN(num)) {
+            num = parseInt(prompt(`Entrada inválida. Ingrese el número ${i + 1} nuevamente:`));
+        }
+        array.push(num);
+        suma += num;
+    }
+    alert(`La suma de los ${n} números es: ${suma}\nNúmeros ingresados: ${array.join(" - ")}`);
+}
+//ejercicio 6:
+function leer_2_numeros_solicitar_usuario_ingrese_la_sumar_multipricar_restar_dividir() {
+    let num1 = Number(prompt("Ingrese el primer número:"));
+    let num2 = Number(prompt("Ingrese el segundo número:"));
+    let opcion = prompt("Elija una operación:\n1 - Sumar\n2 - Restar\n3 - Multiplicar\n4 - Dividir");
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Uno o ambos valores ingresados no son válidos.");
+        return;
+    }
+    let resultado;
+    if (opcion === "1") {
+        resultado = num1 + num2;
+    } else if (opcion === "2") {
+        resultado = num1 - num2;
+    } else if (opcion === "3") {
+        resultado = num1 * num2;
+    } else if (opcion === "4") {
+        if (num2 === 0) {
+            alert("No se puede dividir por cero.");
+            return;
+        }
+        resultado = num1 / num2;
+    } else {
+        alert("Opción inválida.");
+        return;
+    }
+    alert(`El resultado es: ${resultado}`);
+}
+
+
+//ejercicio 7:
+function sumar_n_numero_pares() {
+    let n = parseInt(prompt("¿Cuantos numeros pares desea ingresar?"));
+    let array = [];
+    let suma = 0;
+    for (let i = 0; i < n; i++) {
+        let num = parseInt(prompt(`Ingrese el numero ${i + 1}:`));
+        while (isNaN(num) || num % 2 !== 0) {
+            num = parseInt(prompt(`Entrada ivalida. Ingrese un numero par:`));
+        }
+        array.push(num);
+    }
+    alert(`Los numeros pares ingresados son:\n ${array.join(" - ")}`);
+    alert(`La suma de los numeros pares ingresados es:\n ${array.reduce((a, b) => a + b, 0)}`);
+} //tu lo ingresas todos los numeros pares
+
+
+//ejercicio 8:
+function sumar_n_primeros_los_pares() {
+    let n = parseInt(prompt("¿Cuantos numeros pares desea ingresar?"));
+    let array = [];
+    let suma = 0;
+} //te da los primeros numeros que tu ingreses
+
+
+//ejercicio 9:
+function sumar_n_numero_impares() {
+    let n = parseInt(prompt("¿Cuantos numeros impares desea ingresar?"));
+    let array = [];
+    let suma = 0;
+    for (let i = 0; i < n; i++) {
+        let num = parseInt(prompt(`Ingrese el numero ${i + 1}:`));
+        while (isNaN(num) || num % 2 === 0) {
+            num = parseInt(prompt(`Entrada invalida. Ingrese un numero impar:`));
+        }
+        array.push(num);
+    }
+    alert(`Los numeros impares ingresados son:\n ${array.join(" - ")}`);
+}
+
+
+
+
+//ejercicio 10:
+function sumar_n_primeros_impares(){
+let n = parseInt(prompt("cuantos numeros inpares desea ingresar"));
+let array = [];
+let impar = 1;
+for (let i = 0; i <n; i++){
+    array.push(impar);
+    impar += 2;
+}
+alert(`Los primeros ${n} numeros impares son:\n ${array.join(" - ")}`);
+}
+
+
+//ejercio11:
+function sumar_n_primeros_multiplos_3() {
+    let n = parseInt(prompt("¿Cuántos números múltiplos de 3 deseas ingresar?"));
+    let array = [];
+    let multiplo = 3;
+    for (let i = 0; i < n; i++) {
+        array.push(multiplo);
+        multiplo += 3; 
+    }
+
+    alert(`Los primeros ${n} números múltiplos de 3 son:\n${array.join(" - ")}`);
+}
+
+//ejercio12:
+function diagrama_flujo_calcule_el_factorial_de_n(){
+    let n = parseInt(prompt("ingrese un numero para calcular su factorial"));
+    let factorial =1;
+    let array = [];
+    for (let i = 1; i <= n; i++){
+        factorial *= i;
+        array.push(i);
+    }
+    alert(`El factorial de ${n} es:\n ${factorial}`);
+    alert(`Los numeros que multiplicamos son:\n ${array.join(" - ")}`);
+}
+
+//ejercio13:
+function conversion_grados_celsius_fahrenheit() {
+    let celsius = parseFloat(prompt("Ingrese la temperatura en grados Celsius:"));
+    if (!Number.isFinite(celsius)) {
+        alert("Por favor, ingresa un valor numérico válido.");
+        return;
+    }
+    let fahrenheit = celsius * 9 / 5 + 32;
+    let array = [];
+    for (let i = 0; i <= celsius; i++) {
+        array.push(i);
+    }
+    alert(`La temperatura en grados Fahrenheit es:\n${fahrenheit}`);
+}
+
+
+//ejercicio14:
+function busqueda_palabra_mas_larga_en_frase() {
+    let frase = prompt("Ingresa una frase:");
+    let palabras = frase.split(" ");
+    let array = [];
+    let maxLargo = 0;
+    for (let i = 0; i < palabras.length; i++) {
+        let palabra = palabras[i];
+        if (palabra.length > maxLargo) {
+            maxLargo = palabra.length;
+            array = [];
+            array.push(palabra);
+        } else if (palabra.length === maxLargo) {
+            array.push(palabra);
+        }
+    }
+    alert("La(s) palabra(s) más larga(s) es/son:\n" + array.join(" - "));
+    alert(`La longitud de la palabra más larga es:\n ${maxLargo}`);
+    alert(`Las palabras son:\n ${array.join(" - ")}`);
+}
+
+
+//ejercicio15:
+function modificar_anterior_permita_sumar_n_numeros() {
+    let entrada = prompt("Ingresa un número:");
+    let partes = entrada.split(" "); // Aunque no se necesita, la usamos como pediste
+    let n = parseInt(partes[0]);
+    let array = [];
+    for (let i = 2; i <= n; i++) {
+        let esPrimo = true;
+        for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+                esPrimo = false;
+                break;
             }
-            numeros.push(num); //agregar el numero al array
-            suma += num; //sumar los numeros
         }
-        alert(`Los números ingresados son: ${numeros.join(", ")}`); //muestra los numeros en un solo mensaje    
-        alert (`La suma de los números es: ${suma}`); //muestra la suma de los numeros
-        
+        if (esPrimo) {
+            array.push(i);
+        }
     }
+    alert(`Los números primos hasta ${n} son:\n${array.join(" - ")}`);
+    alert(`La cantidad de números primos es:\n ${array.length}`);
     
+}
+
+function ingresar_n_valores_imprimir_solo_pares() {
+
+        let n = parseInt(prompt("¿Cuántos valores quieres ingresar?"));
+        let arrayPares = [];
     
+        for (let i = 0; i < n; i++) {
+            let valor = parseInt(prompt(`Ingresa el valor ${i + 1}:`));
     
-    function sumar_n_numero_pares() {
-        let n = parseInt(prompt("Ingrese cuántos números pares desea sumar:")); //validar sea un numero
-        let suma = 0;
-        let numerosPares = [];
-    
-        for (let i = 1; i <= n; i++) { // desde 1 has el numero que se agrega
-            let num = parseInt(prompt(`Ingrese el número ${i} de ${n}: `));//balidara el numero
-    
-            // Mientras el número no sea válido o no sea par, seguir pidiendo un número
-            while (isNaN(num) || num % 2 !== 0) { //validar que sea par
-                alert("El número ingresado no es válido o no es par. Intente nuevamente.");
-                num = parseInt(prompt(`Ingrese el número ${i} de ${n}: `));//validara el numero
+            // Verifica si el número es par
+            if (valor % 2 === 0) {
+                arrayPares.push(valor); // Agrega el número par al array
             }
-            numerosPares.push(num);// agregara el el numero a la listade los pares
-            suma += num;// sumar los numeros pares
         }
-        alert(`Los números pares ingresados fueron: ${numerosPares.join(", ")}`); //mostrara los numeros pares ingresado
-        alert(`La suma de los números pares es: ${suma}`);// mostrara la suma de los numeros pares
+    
+        // Muestra los números pares
+        alert("Los números pares ingresados son:\n" + arrayPares.join(", "));
     }
+    

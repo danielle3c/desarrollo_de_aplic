@@ -12,20 +12,27 @@ body {
     text-align: center;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* NAV */
 nav {
     background-color: #333;
     padding: 10px;
+    width: 100%;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 20px;
 }
 
@@ -44,34 +51,41 @@ nav ul li a:hover {
     text-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
 }
 
-/* Mostrar container y container2 uno al lado del otro */
-body > section.container,
-body > section.container2 {
-    display: inline-block;
-    vertical-align: auto;
-    width: 45%;
-    margin: 20px 2.5%;
+/* Secciones */
+body > section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 90%;
+    max-width: 600px;
 }
 
+/* Mostrar container y container2 uno al lado del otro en pantallas grandes */
+@media (min-width: 768px) {
+    body > section.container, body > section.container2 {
+        display: inline-block;
+        width: 45%; /* Ancho ajustado para pantallas grandes */
+        margin: 20px 2.5%;
+    }
+}
 
 /* Estilos específicos container */
 .container {
     padding: 20px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+    background-color: #e74c3c; /* Rojo */
 }
 
 .container p {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #f39c12;
+    color: #fff;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 .container button {
     padding: 15px 30px;
-    background-color: #e74c3c;
-    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -91,19 +105,18 @@ body > section.container2 {
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
+    background-color: #00cec9; /* Aqua */
 }
 
 .container2 p {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #00cec9;
+    color: #fff;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 .container2 button {
     padding: 15px 30px;
-    background-color: #00cec9;
-    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -115,5 +128,441 @@ body > section.container2 {
 .container2 button:hover {
     background-color: #0984e3;
     color: #fff;
+    transform: scale(1.1);
+}
+
+/* Estilos adicionales para otros contenedores con colores únicos */
+.container3 {
+    padding: 20px;
+    background-color: #6a0094; /* Púrpura */
+    border-radius: 10px;
+}
+
+.container3 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container3 button {
+    padding: 15px 30px;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container3 button:hover {
+    background-color: #9b59b6;
+    transform: scale(1.1);
+}
+
+.container4 {
+    padding: 20px;
+    background-color: #3498db; /* Azul */
+    border-radius: 10px;
+}
+
+.container4 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container4 button {
+    padding: 15px 30px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container4 button:hover {
+    background-color: #3498db;
+    transform: scale(1.1);
+}
+
+.container5 {
+    padding: 20px;
+    background-color: #f39c12; /* Naranja */
+    border-radius: 10px;
+}
+
+.container5 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container5 button {
+    padding: 15px 30px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container5 button:hover {
+    background-color: #f39c12;
+    transform: scale(1.1);
+}
+
+.container6 {
+    padding: 20px;
+    background-color: #2ecc71; /* Verde */
+    border-radius: 10px;
+}
+
+.container6 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container6 button {
+    padding: 15px 30px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container6 button:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
+
+.container7 {
+    padding: 20px;
+    background-color: #e67e22; /* Naranja oscuro */
+    border-radius: 10px;
+}
+
+.container7 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container7 button {
+    padding: 15px 30px;
+    background-color: #d35400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container7 button:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+
+.container8 {
+    padding: 20px;
+    background-color: #34495e; /* Gris oscuro */
+    border-radius: 10px;
+}
+
+.container8 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container8 button {
+    padding: 15px 30px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container8 button:hover {
+    background-color: #34495e;
+    transform: scale(1.1);
+}
+
+.container9 {
+    padding: 20px;
+    background-color: #1abc9c; /* Verde azulado */
+    border-radius: 10px;
+}
+
+.container9 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container9 button {
+    padding: 15px 30px;
+    background-color: #16a085;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container9 button:hover {
+    background-color: #1abc9c;
+    transform: scale(1.1);
+}
+
+.container10 {
+    padding: 20px;
+    background-color: #95a5a6; /* Gris */
+    border-radius: 10px;
+}
+
+.container10 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container10 button {
+    padding: 15px 30px;
+    background-color: #7f8c8d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container10 button:hover {
+    background-color: #95a5a6;
+    transform: scale(1.1);
+}
+
+.container11 {
+    padding: 20px;
+    background-color: #8e44ad; /* Violeta */
+    border-radius: 10px;
+}
+
+.container11 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container11 button {
+    padding: 15px 30px;
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container11 button:hover {
+    background-color: #8e44ad;
+    transform: scale(1.1);
+}
+
+.container12 {
+    padding: 20px;
+    background-color: #f1c40f; /* Amarillo */
+    border-radius: 10px;
+}
+
+.container12 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container12 button {
+    padding: 15px 30px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container12 button:hover {
+    background-color: #f1c40f;
+    transform: scale(1.1);
+}
+
+.container13 {
+    padding: 20px;
+    background-color: #e74c3c; /* Rojo oscuro */
+    border-radius: 10px;
+}
+
+.container13 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container13 button {
+    padding: 15px 30px;
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container13 button:hover {
+    background-color: #e74c3c;
+    transform: scale(1.1);
+}
+
+.container14 {
+    padding: 20px;
+    background-color: #d35400; /* Naranja intenso */
+    border-radius: 10px;
+}
+
+.container14 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container14 button {
+    padding: 15px 30px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container14 button:hover {
+    background-color: #d35400;
+    transform: scale(1.1);
+}
+
+.container15 {
+    padding: 20px;
+    background-color: #16a085; /* Verde azulado oscuro */
+    border-radius: 10px;
+}
+
+.container15 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container15 button {
+    padding: 15px 30px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container15 button:hover {
+    background-color: #16a085;
+    transform: scale(1.1);
+}
+
+.container16 {
+    padding: 20px;
+    background-color: #f39c12; /* Naranja */
+    border-radius: 10px;
+}
+
+.container16 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container16 button {
+    padding: 15px 30px;
+    background-color: #f1c40f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container16 button:hover {
+    background-color: #f39c12;
+    transform: scale(1.1);
+}
+
+.container17 {
+    padding: 20px;
+    background-color: #7f8c8d; /* Gris azulado */
+    border-radius: 10px;
+}
+
+.container17 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container17 button {
+    padding: 15px 30px;
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container17 button:hover {
+    background-color: #7f8c8d;
     transform: scale(1.1);
 }
