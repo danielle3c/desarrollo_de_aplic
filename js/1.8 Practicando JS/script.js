@@ -31,36 +31,28 @@ function escribir_100_primeros_numeros_pares() {
 //ejercicio 3:
 function escribir_100_primeros_numeros_impares() {
     let array = [];
-    for (let n = 1; n <= 200; n++) { //genera un bucle que llega hasta 200
-        if (n % 2 == 1) {
+    for (let n = 1; n <= 200; n++) { 
+        if (n % 2 != 0) {
             array.push(n);
         }
-    }
+    
     alert(`Los primero 100 numeros impares son:\n ${array.join(" - ")}`);
 }
+    }
 
 
 //ejercicio 4: 
 function sumar_5_numeros_leidos_teclado() {
     let array = [];
     let suma = 0;
-    let cantidad = 5;
+for (let i = 1; i <= 5; i++) {
+        n= parseInt(prompt(`Ingrese el número ${i}:`));
+        array.push(n);
+        suma += n;
 
-    for (let i = 0; i < cantidad; i++) {
-        let num = parseInt(prompt(`Ingrese el número ${i + 1}:`));
-
-        while (!(typeof num === 'number' && !Number.isNaN(num))) {
-            num = parseInt(prompt(`Entrada inválida. Ingrese el número ${i + 1} nuevamente:`));
-        }
-
-        array.push(num);
-        suma += num;
     }
-
-    alert(`La suma de los 5 números es: ${suma}\nNúmeros ingresados: ${array.join(" - ")}`);
+alert(`Los números ingresados son:\n ${array.join(" - ")}`);
 }
-
-
 //ejercicio 5:
 function modificar_anterior_permita_sumar_n_numeros() {
     let n = parseInt(prompt("¿Cuántos números desea sumar?"));
@@ -153,15 +145,15 @@ function sumar_n_numero_impares() {
 
 
 //ejercicio 10:
-function sumar_n_primeros_impares(){
-let n = parseInt(prompt("cuantos numeros inpares desea ingresar"));
-let array = [];
-let impar = 1;
-for (let i = 0; i <n; i++){
-    array.push(impar);
-    impar += 2;
-}
-alert(`Los primeros ${n} numeros impares son:\n ${array.join(" - ")}`);
+function sumar_n_primeros_impares() {
+    let n = parseInt(prompt("cuantos numeros inpares desea ingresar"));
+    let array = [];
+    let impar = 1;
+    for (let i = 0; i < n; i++) {
+        array.push(impar);
+        impar += 2;
+    }
+    alert(`Los primeros ${n} numeros impares son:\n ${array.join(" - ")}`);
 }
 
 
@@ -172,23 +164,23 @@ function sumar_n_primeros_multiplos_3() {
     let multiplo = 3;
     for (let i = 0; i < n; i++) {
         array.push(multiplo);
-        multiplo += 3; 
+        multiplo += 3;
     }
 
     alert(`Los primeros ${n} números múltiplos de 3 son:\n${array.join(" - ")}`);
 }
 
 //ejercio12:
-function diagrama_flujo_calcule_el_factorial_de_n(){
+function diagrama_flujo_calcule_el_factorial_de_n() {
     let n = parseInt(prompt("ingrese un numero para calcular su factorial"));
-    let factorial =1;
+    let factorial = 1;
     let array = [];
-    for (let i = 1; i <= n; i++){
+    for (let i = 1; i <= n; i++) {
         factorial *= i;
         array.push(i);
     }
     alert(`El factorial de ${n} es:\n ${factorial}`);
-    alert(`Los numeros que multiplicamos son:\n ${array.join(" - ")}`);
+    alert(`Los numeros que multiplicamos son:\n ${array.join(" *")}`);
 }
 
 //ejercio13:
@@ -208,65 +200,26 @@ function conversion_grados_celsius_fahrenheit() {
 
 
 //ejercicio14:
-function busqueda_palabra_mas_larga_en_frase() {
-    let frase = prompt("Ingresa una frase:");
-    let palabras = frase.split(" ");
-    let array = [];
-    let maxLargo = 0;
-    for (let i = 0; i < palabras.length; i++) {
-        let palabra = palabras[i];
-        if (palabra.length > maxLargo) {
-            maxLargo = palabra.length;
-            array = [];
-            array.push(palabra);
-        } else if (palabra.length === maxLargo) {
-            array.push(palabra);
-        }
-    }
-    alert("La(s) palabra(s) más larga(s) es/son:\n" + array.join(" - "));
-    alert(`La longitud de la palabra más larga es:\n ${maxLargo}`);
-    alert(`Las palabras son:\n ${array.join(" - ")}`);
-}
 
 
 //ejercicio15:
-function modificar_anterior_permita_sumar_n_numeros() {
-    let entrada = prompt("Ingresa un número:");
-    let partes = entrada.split(" "); // Aunque no se necesita, la usamos como pediste
-    let n = parseInt(partes[0]);
-    let array = [];
-    for (let i = 2; i <= n; i++) {
-        let esPrimo = true;
-        for (let j = 2; j < i; j++) {
-            if (i % j === 0) {
-                esPrimo = false;
-                break;
-            }
-        }
-        if (esPrimo) {
-            array.push(i);
-        }
-    }
-    alert(`Los números primos hasta ${n} son:\n${array.join(" - ")}`);
-    alert(`La cantidad de números primos es:\n ${array.length}`);
-    
-}
 
+// ejercicio16:
+
+
+
+
+//ejercio17:
 function ingresar_n_valores_imprimir_solo_pares() {
 
-        let n = parseInt(prompt("¿Cuántos valores quieres ingresar?"));
-        let arrayPares = [];
-    
-        for (let i = 0; i < n; i++) {
-            let valor = parseInt(prompt(`Ingresa el valor ${i + 1}:`));
-    
-            // Verifica si el número es par
-            if (valor % 2 === 0) {
-                arrayPares.push(valor); // Agrega el número par al array
-            }
+    let n = parseInt(prompt("¿Cuántos valores quieres ingresar?"));
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let valor = parseInt(prompt(`Ingresa el valor ${i + 1}:`));
+        if (valor % 2 === 0) {
+            array.push(valor);
         }
-    
-        // Muestra los números pares
-        alert("Los números pares ingresados son:\n" + arrayPares.join(", "));
     }
-    
+    alert("Los números pares ingresados son:\n" + array.join(", "));
+}
+
