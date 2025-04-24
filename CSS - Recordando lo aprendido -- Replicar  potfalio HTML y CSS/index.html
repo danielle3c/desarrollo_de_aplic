@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>perfil</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="nav">
@@ -16,25 +18,74 @@
             <li><a href="#">Conexiones</a></li>
             <li><button class="btn">Cerrar sesión</button></li>
         </ul>
-        
-</div>
 
-<div class="profile-card">
-    <div class="profile-header"></div>
-    <div class="profile-picture">
-        <img src="img/user-circle.png" alt="Foto de perfil">
     </div>
-    <div class="profile-content">
-        <h2>Jane Doe</h2>
-        <div class="location">
-            <p>bergen, noruega</p>
+<div class="toda_la_pagina">
+    <div class="card-perfil">
+        <div class="encabezado-azul"></div>
+            <img src="img/12225881.png" alt="Foto de perfil" class="foto-superpuesta" />
+            <h2>Jane Doe</h2>
+            <p class="ubicacion">Bergen, Noruega</p>
+            <p class="descripcion">
+                Desarrolladora Frontend<br />
+                Conocimientos en HTML, CSS, JavaScript
+            </p>
+            <a href="#" class="editar">
+                <img src="img/gear.png" alt="icono editar" class="icono" /> Editar perfil
+            </a>
         </div>
-        <p>desarrolladora frontend</p>
-        <p>conociniemientos en html, css, javacript</p>
-        <a href="#" class="edit-profile">
-            <img src="img/gear.png" alt="Settings icon"> edit profile
-        </a>
-        
     </div>
-</body>
-</html>
+        
+            <!-- LADO DERECHO -->
+            <div class="lado_derecho">
+    
+                <!-- SOLICITUDES -->
+                <div class="solicitud">
+                    <h2>Solicitudes de conexión</h2>
+                    <button class="btn">Ver todas</button>
+                    <div class="solicitud-item">
+                        <img src="img/12225881.png" alt="Foto de Steve Jobs" class="foto" />
+                        <p>Steve Jobs</p>
+                        <img src="img/Adobe Express - file.png" alt="Aceptar solicitud" class="icono" />
+                    </div>
+                </div>
+                <div class="solicitud">
+                        <img src="img/12225881.png" alt="Foto de Bill Gates" class="foto" />
+                        <p>Bill Gates</p>
+                        <img src="img/Adobe Express - file.png" alt="Aceptar solicitud" class="icono" />
+                    </div>
+            </div>
+            <
+                <!-- CONEXIONES -->
+                <div class="conexiones">
+                    <h2>Conexiones</h2>
+                    <button class="btn">Ver todas</button>
+    
+                    <div class="tus_conexiones">
+                        <img src="img/12225881.png" alt="Foto de Richard Stallman" class="foto" />
+                        <p>Richard Stallman</p>
+                    </div>
+    
+                    <div class="tus_conexiones">
+                        <img src="img/12225881.png" alt="Foto de Linus Torvalds" class="foto" />
+                        <p>Linus Torvalds</p>
+                    </div>
+    
+                    <div class="tus_conexiones">
+                        <img src="img/12225881.png" alt="Foto de Ada Lovelace" class="foto" />
+                        <p>Ada Lovelace</p>
+                    </div>
+    
+                    <div class="tus_conexiones">
+                        <img src="img/12225881.png" alt="Foto de Grace Hopper" class="foto" />
+                        <p>Grace Hopper</p>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    
+    </body>
+    
+    </html>
+    

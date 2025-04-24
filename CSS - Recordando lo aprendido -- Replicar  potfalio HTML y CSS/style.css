@@ -55,3 +55,102 @@ body {
     
 }
 
+.btn:hover {
+    background-color: #3498db;
+    transition: 0.3s;
+}
+
+.toda_la_pagina {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* separa a los extremos */
+    padding: 56px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-perfil {
+    width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    
+    text-align: center;
+    
+}
+
+.encabezado-azul {
+    background-color: #3498db;
+    height:150px;
+}
+
+
+
+.foto-superpuesta {
+    width: 300px;
+    margin: -50px;
+}
+
+h2 {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.ubicacion {
+    color: #999;
+    margin: 5px 0;
+}
+
+
+
+.descripcion {
+    margin: 10px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.editar {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.icono {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+.lado_derecho {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 100px;
+    
+}
+
+
+.solicitudes {
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
