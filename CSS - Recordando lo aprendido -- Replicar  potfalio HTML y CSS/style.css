@@ -187,8 +187,20 @@ body {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    margin-left: 215px;
-    margin-right: -200px;
+    margin-left: 220px;
+    margin-right: -210px;
+}
+.icono2{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 230px;
+    margin-right: -220px;
+}
+.icono3{
+    width: 20px;
+    margin: 10px;
+    margin-left: -20px;
 }
 
 .conexiones {
