@@ -1,0 +1,56 @@
+*{
+    width: 1000px;
+    margin: 0 auto;
+    }
+    h1{
+        text-align: center;
+        color: #363646;
+    }
+    .padre{
+        margin: 10px;
+        
+    }
+    .azul {
+        background-color: #57c7e7;
+    }
+
+
+    .pink{
+        background-color: #d89ddc;
+        display: flex;
+    justify-content: center;
+    }
+    
+
+    .blanco{
+        background-color: #fdfdff;
+    }
+
+    .verde_claro{
+        background-color: #90ee91;
+    }
+    
+
+    .celeste{
+        background-color: #b5fffe;
+        display: flex;
+    justify-content: center;
+    }
+
+
+    .amarrilo{
+        background-color: #ffffc7;
+    }
+
+
+    .foto{
+        display: flex;
+        justify-content: space-between;
+    }
+    img{
+        height: 150px;
+        width: 150px;
+        margin: 30px;
+        margin-right: 150px;
+        
+    }
