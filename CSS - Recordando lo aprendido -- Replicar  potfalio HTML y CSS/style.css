@@ -109,9 +109,10 @@ body {
     font-size: 14px;
 }
 
-.icono {
-    width: 16px;
-    height: 16px;
+.icono3{
+    width: 20px;
+    margin-left: -30px;
+    margin-right: 10px;
 }
 
 .lado_derecho {
@@ -174,7 +175,22 @@ body {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 160px;
+    margin-right:-150px ;
+}
+
+.icono2{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 150px;
+    margin-right:-140px ;
+}
+
+.icono3{
+    width: 20px;
+    margin-left: -30px;
+    margin-right: 10px;
 }
 
 .conexiones {
