@@ -26,19 +26,29 @@ while (nombre.toLowerCase() !== "salir") {
 
 
 
-function registro_de_productos() {
-// Crear un arreglo con productos iniciales
-let productos = ["manzana", "pan", "leche"];
+function simulador_de_caja() {
+    // Paso 1: Crear un arreglo con productos iniciales
+    let productos = ["manzana", "pan", "leche"];
 
-// Simular 5 pasos de clientes
-for (let i = 0; i < 5; i++) {
-    // Verificar si hay productos disponibles
-    if (productos.length > 0) {
-        // Vender el último producto (usando pop)
-        let productoVendido = productos.pop();
-        console.log(`Producto vendido: ${productoVendido}`);
-    } else {
-        console.log("Sin stock");
+    // Paso 2: Simular el paso de 5 clientes
+    for (let i = 0; i < 5; i++) {
+        if (productos.length > 0) {
+            let productoVendido = productos.pop();
+            console.log(`Producto vendido: ${productoVendido}`);
+        } else {
+            console.log("Sin stock");
+        }
     }
+
+    // Paso extra: Reponer productos ingresados por el usuario
+    let cantidad = prompt("¿Cuántos productos deseas reponer?");
+    cantidad = parseInt(cantidad);
+
+    for (let i = 0; i < cantidad; i++) {
+        let nuevoProducto = prompt(`Ingresa el nombre del producto #${i + 1}:`);
+        productos.push(nuevoProducto);
+    }
+
+    console.log("Productos repuestos:", productos);
 }
-}
+
