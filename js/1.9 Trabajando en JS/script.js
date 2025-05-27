@@ -27,10 +27,10 @@ while (nombre.toLowerCase() !== "salir") {
 
 
 function simulador_de_caja() {
-    // Paso 1: Crear un arreglo con productos iniciales
+    // Crear un arreglo con productos iniciales
     let productos = ["manzana", "pan", "leche"];
 
-    // Paso 2: Simular el paso de 5 clientes
+    // Simular el paso de 5 clientes
     for (let i = 0; i < 5; i++) {
         if (productos.length > 0) {
             let productoVendido = productos.pop();
@@ -39,8 +39,7 @@ function simulador_de_caja() {
             console.log("Sin stock");
         }
     }
-
-    // Paso extra: Reponer productos ingresados por el usuario
+// Reponer productos ingresados por el usuario
     let cantidad = prompt("¿Cuántos productos deseas reponer?");
     cantidad = parseInt(cantidad);
 
