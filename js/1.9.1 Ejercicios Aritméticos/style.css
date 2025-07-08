@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0e7ff;
+    /* azul muy claro */
+    color: #2e1065;
+    /* violeta oscuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Secciones */
+.tarea {
+    background-color: #ede9fe;
+    /* violeta claro */
+    border: 1px solid #c4b5fd;
+    /* borde violeta suave */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Botones */
+button {
+    background-color: #6366f1;
+    /* azul-violeta medio */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4f46e5;
+    /* tono un poco más oscuro al pasar el mouse */
+}
