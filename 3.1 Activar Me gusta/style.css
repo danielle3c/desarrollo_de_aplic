@@ -1,0 +1,37 @@
+body {
+    background-color: #f0f0f0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 10px;
+    width: 330px;
+    margin: 30px auto;
+
+}
+
+.like {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-button {
+    background-color: yellow;
+    border: 2px solid black;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin-left: 10px;
+
+    /* sombra al botón */
+    box-shadow: 3px 3px 0 black;
+    transition: all 0.2s ease;
+}
+
+.like-button:active {
+    box-shadow: 1px 1px 0 black;
+    transform: translate(2px, 2px);
+}
