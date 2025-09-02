@@ -5,48 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Estudiantes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
-    <h1>Registro de Estudiante</h1>
 
-    <form id="formRegistro">
-        <label>Nombre:
-            <input type="text" id="nombre" required minlength="2">
-        </label><br><br>
+    <div class="container">
+        <h1>Registro de Estudiante</h1>
 
-        <label>Edad:
-            <input type="number" id="edad" min="14" max="100">
-        </label><br><br>
+        <form id="formRegistro">
+            <label>Nombre:
+                <input type="text" id="nombre" required minlength="2">
+            </label>
 
-        <label>Curso:
-            <select id="curso">
-                <option value="">Seleccione</option>
-                <option value="1° Medio">1° Medio</option>  
-                <option value="2° Medio">2° Medio</option>
-                <option value="3° Medio">3° Medio</option>
-                <option value="4° Medio">4° Medio</option>
+            <label>Edad:
+                <input type="number" id="edad" min="14" max="100">
+            </label>
 
-            </select>
-        </label><br><br>
+            <label>Curso:
+                <select id="curso">
+                    <option value="">Seleccione</option>
+                    <option value="1° Medio">1° Medio</option>
+                    <option value="2° Medio">2° Medio</option>
+                    <option value="3° Medio">3° Medio</option>
+                    <option value="4° Medio">4° Medio</option>
+                </select>
+            </label>
 
-        Jornada:<br>
-        <label><input type="radio" name="jornada" value="Mañana"> Mañana</label>
-        <label><input type="radio" name="jornada" value="Tarde"> Tarde</label><br><br>
+            <label>Jornada:</label>
+            <label><input type="radio" name="jornada" value="Mañana"> Mañana</label>
+            <label><input type="radio" name="jornada" value="Tarde"> Tarde</label>
 
-        <label>
-            <input type="checkbox" id="aceptaReglamento"> Acepto el reglamento
-        </label><br><br>
+            <label>
+                <input type="checkbox" id="aceptaReglamento"> Acepto el reglamento
+            </label>
 
-        <button type="submit">Registrar</button>
-        <button type="button" id="btnLimpiar">Limpiar</button>
-    </form>
+            <div style="display: flex; justify-content: space-between;">
+                <button type="submit">Registrar</button>
+                <button type="button" id="btnLimpiar">Limpiar</button>
+            </div>
+        </form>
 
-    <p class="error"></p>
-    <p class="resultado"></p>
+        <!-- Mensajes debajo y centrados -->
+        <p class="error"></p>
+        <p class="resultado"></p>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="static/js/main.js"></script>
 </body>
 
 </html>

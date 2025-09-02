@@ -1,0 +1,110 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #08203b, #67b6ce);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Contenedor principal (formulario) */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Etiquetas y entradas */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #2460a5;
+    outline: none;
+}
+
+/* Botones */
+button {
+    width: 48%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"] {
+    background: #4a90e2;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background: #357abd;
+}
+
+button#btnLimpiar {
+    background: #ccc;
+}
+
+button#btnLimpiar:hover {
+    background: #aaa;
+}
+
+/* Mensajes */
+.error,
+.resultado {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.error {
+    color: #e74c3c;
+}
+
+.resultado {
+    color: #000000;
+}
+
+/* Cuando tienen contenido, aparecen */
+.error:not(:empty),
+.resultado:not(:empty) {
+    opacity: 1;
+}
