@@ -14,4 +14,8 @@ function turnOff(element) {
     
 }
 
+//FUNCION PARA ILIMINAR BOTON 
+function hide(element) {
+    element.remove();
+}
 
