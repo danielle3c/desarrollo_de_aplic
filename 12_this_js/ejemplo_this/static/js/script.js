@@ -6,11 +6,11 @@ function example(elemento) {
 
 //craer funcion turnoff
 function turnOff(element) {
-    if (element.innerText === "Off") {
-        element.innerText = "On";
+    if (element.innerText === "On") {
+        element.innerText = "Off";
         return;
     }
-    element.innerText = "Off";
+    element.innerText = "On";
     
 }
 
