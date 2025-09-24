@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body {
+    background-color: #f0f0f0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+
+.navegador{
+    background-color: #cccccc;
+    color: #000000;
+    padding: 10px;
+    text-align:left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-login {
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+    width: 50%;              /* ancho más amplio, ajusta según necesites */
+    margin: 0 auto;          /* centra el contenedor dentro del header */
+    padding: 10px 20px;      /* espaciado interno */
+}
+
