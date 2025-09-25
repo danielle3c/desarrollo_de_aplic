@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dojonary</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <script src="static/js/main.js" defer></script>
+    <link rel="stylesheet" href="static/css/style.css" />
+    
 </head>
 <body>
     <div class="navegador">
         <h1>Dojonary</h1>
         <div class="search-login">
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" />
             <button type="button" class="login-btn" onclick="toggleLogin(this)">Login</button>
         </div>
     </div>
@@ -25,8 +25,10 @@
                     <p>plural: ninjas</p>
                 </div>
                 <div class="definicion">
-                    <p>a practitioner skilled in the <strong>Japanese</strong> art of <strong>ninjutsu</strong></p>
-                    <button type="button" class="likes-btn" onclick="likealert()">13 likes</button>
+                    <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
+                    <button type="button" class="likes-btn" onclick="likealert(this)">
+                        like <span>13</span> likes
+                    </button>
                 </div>
             </div>
 
@@ -37,11 +39,19 @@
                     <p>plural: ninjas</p>
                 </div>
                 <div class="definicion">
-                    <p>a <strong>programmer</strong> who breaks down problems with <strong>zen</strong>-like focus</p>
-                    <button type="button" class="likes-btn" onclick="likealert()">37 likes</button>
+                    <p>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+                    <button type="button" class="likes-btn" onclick="likealert(this)">
+                        like <span>37</span> likes
+                    </button>
                 </div>
             </div>
         </div>
+
+        <div class="lado_derecho">
+            <p><strong>Dojonary</strong> is defined by <strong>YOU</strong></p>
+            <button type="button" class="add-btn" onclick="removeButton(this)">Add Definition</button>
+        </div>
     </div>
+    <script src="static/js/script.js" ></script>
 </body>
 </html>
