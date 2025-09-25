@@ -12,10 +12,10 @@ function likealert(button) {
 function toggleLogin(button) {
     if (button.innerText === "Login") {
         button.innerText = "Logout";
-        button.style.backgroundColor = "#e74c3c"; // rojo para logout
+        button.style.backgroundColor = "#e74c3c"; 
     } else {
         button.innerText = "Login";
-        button.style.backgroundColor = "#3498db"; // azul para login
+        button.style.backgroundColor = "#3498db"; 
     }
 }
 function removeButton(button) {
