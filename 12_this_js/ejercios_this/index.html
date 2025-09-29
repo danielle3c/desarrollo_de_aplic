@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dojonary</title>
     <link rel="stylesheet" href="static/css/style.css" />
-    
+
 </head>
 <body>
-    <div class="navegador">
-        <h1>Dojonary</h1>
-        <div class="search-login">
-            <input type="text" placeholder="Search" />
-            <button type="button" class="login-btn" onclick="toggleLogin(this)">Login</button>
-        </div>
+    <!-- Barra superior -->
+    <div class="top">
+        <h1 class="title">Dojonary</h1>
+        <input class="search" type="text" placeholder="Search" />
+        <button class="btn login" onclick="toggleLogin(this)">Login</button>
     </div>
 
+    <!-- Contenedor principal -->
     <div class="container">
         <div class="lado_izquierdo">
+            <!-- Primera definición -->
             <div class="ninja">
                 <h2>Ninja</h2>
                 <div class="linea">
@@ -26,12 +27,13 @@
                 </div>
                 <div class="definicion">
                     <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
-                    <button type="button" class="likes-btn" onclick="likealert(this)">
+                    <button type="button" class="btn" onclick="likealert(this)">
                         like <span>13</span> likes
                     </button>
                 </div>
             </div>
 
+            <!-- Segunda definición -->
             <div class="ninja2">
                 <h2>Ninja</h2>
                 <div class="linea">
@@ -40,18 +42,20 @@
                 </div>
                 <div class="definicion">
                     <p>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
-                    <button type="button" class="likes-btn" onclick="likealert(this)">
+                    <button type="button" class="btn" onclick="likealert(this)">
                         like <span>37</span> likes
                     </button>
                 </div>
             </div>
         </div>
 
+        <!-- Lado derecho -->
         <div class="lado_derecho">
             <p><strong>Dojonary</strong> is defined by <strong>YOU</strong></p>
-            <button type="button" class="add-btn" onclick="removeButton(this)">Add Definition</button>
+            <button type="button" class="btn" onclick="removeButton(this)">Add Definition</button>
         </div>
     </div>
-    <script src="static/js/script.js" ></script>
+
+    <script src="static/js/script.js"></script>
 </body>
 </html>
