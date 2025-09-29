@@ -1,23 +1,18 @@
-function likealert(button) {
-    // Buscar el <span> que contiene el número de likes
-    const span = button.querySelector('span');
-
-    // Convertir su texto a número y sumar 1
-    let likes = parseInt(span.innerText);
-    likes++;
-
-    // Actualizar el contenido del <span>
-    span.innerText = likes;
-}
 function toggleLogin(button) {
     if (button.innerText === "Login") {
         button.innerText = "Logout";
-        button.style.backgroundColor = "#e74c3c"; 
     } else {
         button.innerText = "Login";
-        button.style.backgroundColor = "#3498db"; 
     }
 }
+
+function likealert(button) {
+    alert("Ninja was liked!");
+    const span = button.querySelector("span");
+    let currentLikes = parseInt(span.innerText);
+    span.innerText = currentLikes + 1;
+}
+
 function removeButton(button) {
     button.remove();
 }
