@@ -1,21 +1,22 @@
-function liked(element) {
-    let likeSpan = element.querySelector('span');
+function liked(elemento) {
+    let likeSpan = elemento.querySelector('span');
     let incrementarLikes = parseInt(likeSpan.innerText);
     incrementarLikes = incrementarLikes + 1;
     likeSpan.innerText = incrementarLikes;
 }
 
-
-
-function login(element) {
-    if (element.innerText === "Login") {
-        element.innerText = "Logout";
+function login(elemento) {
+    if (elemento.innerText === "Login") {
+        elemento.innerText = "Logout";
+        elemento.style.color = "red"; 
     } else {
-        element.innerText = "Login";
+        elemento.innerText = "Login"; 
+        elemento.style.color = "white";    
     }
 }
 
-function hide(element) {
+
+function hide(elemento) {
     // Oculta el botón.
-    element.style.display = 'none';
+    elemento.style.display = 'none';  
 }
