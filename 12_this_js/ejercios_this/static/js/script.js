@@ -1,18 +1,21 @@
-function toggleLogin(button) {
-    if (button.innerText === "Login") {
-        button.innerText = "Logout";
+function liked(element) {
+    let likeSpan = element.querySelector('span');
+    let incrementarLikes = parseInt(likeSpan.innerText);
+    incrementarLikes = incrementarLikes + 1;
+    likeSpan.innerText = incrementarLikes;
+}
+
+
+
+function login(element) {
+    if (element.innerText === "Login") {
+        element.innerText = "Logout";
     } else {
-        button.innerText = "Login";
+        element.innerText = "Login";
     }
 }
 
-function likealert(button) {
-    alert("Ninja was liked!");
-    const span = button.querySelector("span");
-    let currentLikes = parseInt(span.innerText);
-    span.innerText = currentLikes + 1;
-}
-
-function removeButton(button) {
-    button.remove();
+function hide(element) {
+    // Oculta el botón.
+    element.style.display = 'none';
 }

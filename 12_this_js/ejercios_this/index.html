@@ -1,60 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dojonary</title>
-    <link rel="stylesheet" href="static/css/style.css" />
 
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
-
-    <div class="top">
-        <h1 class="title">Dojonary</h1>
-        <input class="search" type="text" placeholder="Search" />
-        <button class="btn login" onclick="toggleLogin(this)">Login</button>
-    </div>
-
-
     <div class="container">
-        <div class="lado_izquierdo">
-
-            <div class="ninja">
-                <h2>Ninja</h2>
-                <div class="linea">
-                    <p>noun</p>
-                    <p>plural: ninjas</p>
-                </div>
-                <div class="definicion">
-                    <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
-                    <button type="button" class="btn" onclick="likealert(this)">
-                        like <span>13</span> likes
-                    </button>
-                </div>
-            </div>
-
-
-            <div class="ninja2">
-                <h2>Ninja</h2>
-                <div class="linea">
-                    <p>noun</p>
-                    <p>plural: ninjas</p>
-                </div>
-                <div class="definicion">
-                    <p>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
-                    <button type="button" class="btn" onclick="likealert(this)">
-                        like <span>37</span> likes
-                    </button>
-                </div>
-            </div>
+        <div class="top">
+            <h1 class="title">Dojonary</h1>
+            <input type="text" name="search" placeholder="Search" class="search">
+            <button class="btn login" onclick="login(this)">Login</button>
         </div>
-
-        <div class="lado_derecho">
-            <p><strong>Dojonary</strong> is defined by <strong>YOU</strong></p>
-            <button type="button" class="btn" onclick="removeButton(this)">Add Definition</button>
+        <div class="row">
+            <div class="flex-2">
+                <div class="box definition">
+                    <div class="left">
+                        <h1>ninja</h1>
+                        <p><em>noun</em></p>
+                        <p>Plural: <em>ninjas</em></p>
+                        <button class="btn like" onclick="liked(this)"><span id="like-1">13</span> likes</button>
+                    </div>
+                    <p class="definition-text">A practitioner skilled in the <a href="#">Japanese</a> art of <a
+                            href="#">ninjutsu</a></p>
+                </div>
+                <div class="box definition">
+                    <div class="left">
+                        <h1>ninja</h1>
+                        <p><em>noun</em></p>
+                        <p>Plural: <em>ninjas</em></p>
+                        <button class="btn like" onclick="liked(this)"><span id="like-1">37</span> likes</button>
+                    </div>
+                    <p class="definition-text">A <a href="#">programmer</a> who breaks down problems with <a
+                            href="#">zen</a>-like focus</p>
+                </div>
+            </div>
+            <div class="flex-1">
+                <div class="box">
+                    <h2>Dojonary is defined by YOU</h2>
+                    <button class="btn add" onclick="hide(this)">Add Definition</button>
+                </div>
+            </div>
         </div>
     </div>
-
     <script src="static/js/script.js"></script>
 </body>
+
 </html>
