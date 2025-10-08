@@ -70,24 +70,23 @@ body {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 20px;
+    flex-wrap: wrap; /* para que no se desborde */
 }
 
 /* COLUMNA IZQUIERDA (VIDEO PRINCIPAL) */
 .col-l {
     flex: 2;
+    min-width: 300px;
 }
 
 .video_main {
-    width: 720px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     margin-top: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.placeholder {
-    margin-top: 30px;
 }
 
 /* INFO DEL VIDEO */
@@ -96,6 +95,7 @@ body {
     align-items: center;
     gap: 10px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .title-and-button h1 {
@@ -129,7 +129,7 @@ body {
 /* COLUMNA DERECHA (VIDEOS SUGERIDOS) */
 .col-r {
     flex: 1;
-    max-width: 300px;
+    min-width: 250px;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
@@ -139,7 +139,8 @@ body {
 .sub-header {
     margin-bottom: 15px;
     color: #333;
-    margin-left: -150px;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* VIDEO SUGERIDO */
@@ -148,42 +149,76 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .vid-s {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
     object-fit: cover;
     border-radius: 6px;
     cursor: pointer;
     transition: transform 0.3s ease;
-    margin-left: -150px;
+}
+
+.vid-s:hover {
+    transform: scale(1.03);
 }
 
 .video-title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #444;
-
+    text-align: center;
+    width: 100%;
 }
 
-/* RESPONSIVE (Opcional) */
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .flex-container {
+        width: 90%;
+    }
+}
+
 @media (max-width: 768px) {
     .flex-container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .col-l, .col-r {
+        width: 100%;
+        max-width: 600px;
     }
 
     .col-r {
-        max-width: 100%;
         margin-top: 20px;
-    }
-
-    .video_main {
-        width: 100%;
-        height: auto;
     }
 
     .title-and-button {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .video-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .top {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .btn {
+        margin: 10px 0 0 0;
     }
 }

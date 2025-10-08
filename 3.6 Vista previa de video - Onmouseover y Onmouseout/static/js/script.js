@@ -1,3 +1,15 @@
+// Llamado a todos los videos pequeños
+const videos = document.querySelectorAll('.vid-s');
+
+function vistaPrevia(element) {
+    element.play();
+}
+
+function vistaPreviaPause(element) {
+    element.pause();
+}
+
+
 function cambiarVideo(clickedVideo) {
     const videoMain = document.getElementById("video_main");
     const videoTitle = document.getElementById("video-title");
