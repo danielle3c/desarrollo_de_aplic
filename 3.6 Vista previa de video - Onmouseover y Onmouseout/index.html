@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VideoLab</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
 
@@ -14,73 +14,111 @@
     <h1>VideoLab</h1>
 
     <div class="search-group">
-        <input type="text" placeholder="Search" name="query" class="search">
+        <input type="text" placeholder="Search" name="query" class="search" />
     </div>
 
     <button class="btn">Login</button>
 </div>
 
+<!-- main content -->
+<div class="flex-container">
 
-    <!-- main content -->
-    <div class="flex-container">
+    <!-- left column -->
+    <div class="col-l">
 
-        <!-- left column -->
-        <div class="col-l">
+        <!-- video principal -->
+        <video
+            id="video_main"
+            src="resources/video/YUNGBLUD - Zombie (Official Music Video) - YUNGBLUDVEVO (1080p, h264).mp4"
+            class="video_main"
+            controls
+            autoplay
+            loop
+        ></video>
 
-            <!-- this is a placeholder replace it with a real video -->
-<video id="video_main" src="resources/video/YUNGBLUD - Zombie (Official Music Video) - YUNGBLUDVEVO (1080p, h264).mp4" class="video_main" controls autoplay loop></video>
-
-<div class="row">
-    <div class="start">
-        <!-- Contenedor para alinear h1 y botón -->
-        <div class="title-and-button">
-            <h1>Example Video Title</h1>
-            <button class="btn">Subscribe</button>
+        <div class="row">
+            <div class="start">
+                <!-- Contenedor para alinear h1 y botón -->
+                <div class="title-and-button">
+                    <h1 id="video-title">Example Video Title</h1>
+                    <button class="btn">Subscribe</button>
+                </div>
+                <h3>1.3K Views | June, 18, 2021</h3>
+                <div class="user">
+                    <img src="resources/img/1743561-200.png" alt="user-circle" class="avatar-s" />
+                    <span class="user-name">Example User Name</span>
+                </div>
+            </div>
         </div>
-        <h3>1.3K Views | June, 18, 2021</h3>
-        <div class="user">
-    <img src="resources/img/1743561-200.png" alt="user-circle" class="avatar-s">
-    <span class="user-name">Example User Name</span>
-</div>
 
     </div>
-</div>
 
-
-        </div>
-
-        <!-- right column -->
-
+    <!-- right column -->
     <div class="col-r">
         <h3 class="sub-header">Up Next</h3>
 
         <div class="video-small">
-            <video src="resources/video/14221566_2560_1440_30fps.mp4" alt="video placeholder"  class="vid-s" onclick="cambiarVideo(this)"
-            onmouseover="vistaPrevia(this)" onmouseout="vistaPreviaPause(this)">
+            <video
+                src="resources/video/14221566_2560_1440_30fps.mp4"
+                alt="video placeholder"
+                class="vid-s"
+                data-title="Not a Rick Roll"
+                onclick="cambiarVideo(this)"
+                onmouseover="vistaPrevia(this)"
+                onmouseout="vistaPreviaPause(this)"
+                width="160"
+                height="90"
+            ></video>
             <span class="video-title">Not a Rick Roll</span>
         </div>
 
         <div class="video-small">
-            <video src="resources/video/13520816_3840_2160_60fps.mp4" alt="video placeholder"  class="vid-s" onclick="cambiarVideo(this)"
-                        onmouseover="vistaPrevia(this)" onmouseout="vistaPreviaPause(this)"></video>
-            
-                <span class="video-title">10 Facts About ET's Cat!</span>
+            <video
+                src="resources/video/13520816_3840_2160_60fps.mp4"
+                alt="video placeholder"
+                class="vid-s"
+                data-title="10 Facts About ET's Cat!"
+                onclick="cambiarVideo(this)"
+                onmouseover="vistaPrevia(this)"
+                onmouseout="vistaPreviaPause(this)"
+                width="160"
+                height="90"
+            ></video>
+            <span class="video-title">10 Facts About ET's Cat!</span>
         </div>
 
         <div class="video-small">
-            <video src="resources/video/14421886_1920_1080_24fps.mp4" alt="video placeholder"  class="vid-s" onclick="cambiarVideo(this)"
-                        onmouseover="vistaPrevia(this)" onmouseout="vistaPreviaPause(this)"></video>>
+            <video
+                src="resources/video/14421886_1920_1080_24fps.mp4"
+                alt="video placeholder"
+                class="vid-s"
+                data-title="MARIPOSA"
+                onclick="cambiarVideo(this)"
+                onmouseover="vistaPrevia(this)"
+                onmouseout="vistaPreviaPause(this)"
+                width="160"
+                height="90"
+            ></video>
             <span class="video-title">5 Cosplay Tips</span>
         </div>
 
         <div class="video-small">
-            <video src="resources/video/16539294-uhd_3840_2160_24fps.mp4" alt="video placeholder"  class="vid-s" onclick="cambiarVideo(this)"
-                        onmouseover="vistaPrevia(this)" onmouseout="vistaPreviaPause(this)" ></video>
+            <video
+                src="resources/video/16539294-uhd_3840_2160_24fps.mp4"
+                alt="video placeholder"
+                class="vid-s"
+                data-title="Boy Battles Dinobot in Thunderdome"
+                onclick="cambiarVideo(this)"
+                onmouseover="vistaPrevia(this)"
+                onmouseout="vistaPreviaPause(this)"
+                width="160"
+                height="90"
+            ></video>
             <span class="video-title">Boy Battles Dinobot in Thunderdome</span>
         </div>
     </div>
 </div>
 
-    <script src="static/js/script.js"></script>
+<script src="static/js/script.js"></script>
 </body>
 </html>

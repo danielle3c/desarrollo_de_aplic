@@ -1,18 +1,25 @@
-//esta llamdo a todos las vidoes mas pequeños 
+// Llamado a todos los videos pequeños
 const videos = document.querySelectorAll('.vid-s');
 
-function vistaPrevia(element){
+function vistaPrevia(element) {
     element.play();
 }
-function vistaPreviaPause(element){
-element.pause();
+
+function vistaPreviaPause(element) {
+    element.pause();
 }
 
-//esta funcion cambia el video pricipal al video pequeño
 function cambiarVideo(element) {
-    //cambia la fuente del video pricipal al video pequeño que se le dio click  
     const videoMain = document.getElementById("video_main");
-//   console.log(element.src);
-    videoMain.src = element.src;
+    const videoTitle = document.getElementById("video-title"); // Ahora apunta al h1
 
+    // Cambiar el video principal
+    videoMain.src = element.src;
+    videoMain.play();
+
+    // Cambiar el título visible
+    const nuevoTitulo = element.getAttribute("data-title");
+    if (videoTitle && nuevoTitulo) { 
+        videoTitle.textContent = nuevoTitulo;
+    }
 }
