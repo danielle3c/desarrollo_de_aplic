@@ -28,8 +28,8 @@
         <div class="col-l">
 
             <!-- this is a placeholder replace it with a real video -->
-<video src="resources/video/YUNGBLUD - Zombie (Official Music Video) - YUNGBLUDVEVO (1080p, h264).mp4" class="video_main" controls autoplay loop ></video>
-<!-- video info -->
+<video id="video_main" src="resources/video/YUNGBLUD - Zombie (Official Music Video) - YUNGBLUDVEVO (1080p, h264).mp4" class="video_main" controls autoplay loop></video>
+
 <div class="row">
     <div class="start">
         <!-- Contenedor para alinear h1 y botón -->
@@ -55,22 +55,27 @@
         <h3 class="sub-header">Up Next</h3>
 
         <div class="video-small">
-            <video src="resources/video/14221566_2560_1440_30fps.mp4" alt="video placeholder" class="vid-s">
+            <video src="resources/video/14221566_2560_1440_30fps.mp4" alt="video placeholder"  class="vid-s" onclick="cambiarVideo(this)"
+            onmouseover="vistaPrevia(this)" onmouseout="vistaPreviaPause(this)">
             <span class="video-title">Not a Rick Roll</span>
         </div>
 
         <div class="video-small">
-            <video src="resources/video/13520816_3840_2160_60fps.mp4" alt="video placeholder" class="vid-s">
-            <span class="video-title">10 Facts About ET's Cat!</span>
+            <video src="resources/video/13520816_3840_2160_60fps.mp4" alt="video placeholder"  class="vid-s" onclick="cambiarVideo(this)"
+                        onmouseover="vistaPrevia(this)" onmouseout="vistaPreviaPause(this)"></video>
+            
+                <span class="video-title">10 Facts About ET's Cat!</span>
         </div>
 
         <div class="video-small">
-            <video src="resources/video/14421886_1920_1080_24fps.mp4" alt="video placeholder" class="vid-s">
+            <video src="resources/video/14421886_1920_1080_24fps.mp4" alt="video placeholder"  class="vid-s" onclick="cambiarVideo(this)"
+                        onmouseover="vistaPrevia(this)" onmouseout="vistaPreviaPause(this)"></video>>
             <span class="video-title">5 Cosplay Tips</span>
         </div>
 
         <div class="video-small">
-            <video src="resources/video/16539294-uhd_3840_2160_24fps.mp4" alt="video placeholder" class="vid-s">
+            <video src="resources/video/16539294-uhd_3840_2160_24fps.mp4" alt="video placeholder"  class="vid-s" onclick="cambiarVideo(this)"
+                        onmouseover="vistaPrevia(this)" onmouseout="vistaPreviaPause(this)" ></video>
             <span class="video-title">Boy Battles Dinobot in Thunderdome</span>
         </div>
     </div>

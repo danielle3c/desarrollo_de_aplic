@@ -1,12 +1,18 @@
+//esta llamdo a todos las vidoes mas pequeños 
 const videos = document.querySelectorAll('.vid-s');
 
-videos.forEach(video => {
-    video.addEventListener('mouseover', function () {
-        this.play();
-    });
+function vistaPrevia(element){
+    element.play();
+}
+function vistaPreviaPause(element){
+element.pause();
+}
 
-    video.addEventListener('mouseout', function () {
-        this.pause();
-        this.currentTime = 0; 
-    });
-});
+//esta funcion cambia el video pricipal al video pequeño
+function cambiarVideo(element) {
+    //cambia la fuente del video pricipal al video pequeño que se le dio click  
+    const videoMain = document.getElementById("video_main");
+//   console.log(element.src);
+    videoMain.src = element.src;
+
+}
