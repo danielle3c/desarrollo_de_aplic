@@ -141,21 +141,22 @@ body {
     color: #333;
     font-weight: bold;
     text-align: center;
+    font-size: 1.80rem;
 }
 
 /* VIDEO SUGERIDO */
 .video-small {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30PX;
+    justify-content: flex-start;
 }
+
 
 .vid-s {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     height: auto;
     object-fit: cover;
     border-radius: 6px;
@@ -168,10 +169,11 @@ body {
 }
 
 .video-title {
-    font-size: 1rem;
-    color: #444;
-    text-align: center;
-    width: 100%;
+    font-size: 1.80rem;
+    color: #333;
+    text-align: left;
+    width: calc(100% - 120px);
+    line-height: 1.2;
 }
 
 /* RESPONSIVE */
