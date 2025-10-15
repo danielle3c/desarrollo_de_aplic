@@ -1,86 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Weather Forecast</title>
-    <link rel="stylesheet" href="../static/css/style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El tiempo</title>
+        <link rel="stylesheet" href="../static/css/style.css">
 
+</head>
 <body>
-    <!-- Navbar -->
     <div class="navbar">
-        <h1>DojoWeather</h1>
+        <h1>Dojo Weather</h1>
         <ul>
-            <li onclick="cityAlert(this)">Burbank</li>
-            <li onclick="cityAlert(this)">Chicago</li>
-            <li onclick="cityAlert(this)">Dallas</li>
+            <li>Burbank</li>
+            <li>Chicago</li>
+            <li>Dallas</li>
         </ul>
     </div>
 
-    <!-- Ciudad -->
     <div class="container">
         <h2>San Jose</h2>
 
-        <label for="temp">show temperature in</label>
-        <select id="temp" onchange="convertTemps(this)">
-            <option value="c">°C</option>
-            <option value="f">°F</option>
-        </select>
+<select id="temperatura" onchange="ConvertidorTemperatura(this)">
+    <option value="C">C</option>
+    <option value="F">F</option>
+</select>
 
-        <!-- Pronóstico -->
-        <div class="weather">
-            <div class="day">
+        <div class="agua">
+
+            <div class="dia">
                 <h3>Today</h3>
-                <img src="../resources/img/some_rain.png" alt="rain">
-                <p>some rain</p>
-                <div class="temps">
-                    <span class="high">24</span>° /
-                    <span class="low">18</span>°
+                <img src="../resources/img/some_rain.png" alt="Rain">
+                <p>Some Rain</p>
+                <div class="temperaturas">
+                    <span class="alto">24</span>
+                    <span class="bajo">18</span>
                 </div>
             </div>
-            <div class="day">
+
+            <div class="dia">
                 <h3>Tomorrow</h3>
-                <img src="../resources/img/some_sun.png" alt="sun">
-                <p>some sun</p>
-                <div class="temps">
-                    <span class="high">27</span>° /
-                    <span class="low">19</span>°
+                <img src="../resources/img/some_sun.png" alt="Sun">
+                <p>Some Sun</p>
+                <div class="temperaturas">
+                    <span class="alto">27</span>
+                    <span class="bajo">19</span>
                 </div>
             </div>
-            <div class="day">
+
+            <div class="dia">
                 <h3>Friday</h3>
-                <img src="../resources/img/some_clouds.png" alt="cloud">
-                <p>some clouds</p>
-                <div class="temps">
-                    <span class="high">21</span>° /
-                    <span class="low">16</span>°
+                <img src="../resources/img/some_clouds.png" alt="Clouds">
+                <p>Some Clouds</p>
+                <div class="temperaturas">
+                    <span class="alto">21</span>
+                    <span class="bajo">16</span>
                 </div>
             </div>
-            <div class="day">
+
+            <div class="dia">
                 <h3>Saturday</h3>
-                <img src="../resources/img/some_sun.png" alt="sun">
-                <p>some sun</p>
-                <div class="temps">
-                    <span class="high">26</span>° /
-                    <span class="low">21</span>°
+                <img src="../resources/img/some_sun.png" alt="Sun">
+                <p>Some Sun</p>
+                <div class="temperaturas">
+                    <span class="alto">26</span>
+                    <span class="bajo">21</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Cookie Banner -->
-    <div class="cookie" id="cookie">
-        <img src="../resources/img/cookie.png" alt="cookie">
-        <p><strong>Stop! Cookie time</strong><br>
-            We use cookies (sadly not the edible ones) to personalize content and ads,
-            to provide social media features and to analyze our traffic. <a href="#">Read more...</a>
+    <div class="Cookie" id="Cookie">
+        <img src="../resources/img/cookie.png" alt="Cookie">
+        <p><strong>Stop! Cookie Time</strong><br>
+        We use cookies (sandly not the edible ones) to personalize
+    content and ads,
+                to provide social media freatures and to analyze our 
+            traffic. <a href="#">Read more..</a> 
         </p>
         <button onclick="hideCookie()">I Accept</button>
     </div>
-
-    <!-- Script -->
-    <script src="../static/js/script.js"></script>
+        <script src="../static/js/script.js"></script>
 </body>
-
 </html>
