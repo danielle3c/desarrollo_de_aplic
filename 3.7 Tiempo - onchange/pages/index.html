@@ -10,20 +10,26 @@
 <body>
     <div class="navbar">
         <h1>Dojo Weather</h1>
-        <ul>
-            <li>Burbank</li>
-            <li>Chicago</li>
-            <li>Dallas</li>
-        </ul>
+<!-- En tu HTML, modificar las ciudades -->
+<ul>
+    <li onclick="showCityAlert(this)">Burbank</li>
+    <li onclick="showCityAlert(this)">Chicago</li>
+    <li onclick="showCityAlert(this)">Dallas</li>
+</ul>
     </div>
 
-    <div class="container">
+<div class="container">
+    <div class="container-header">
         <h2>San Jose</h2>
+        <div class="temp-selector">
+            <h4>show temperature in</h4>
+            <select id="temperatura" onchange="ConvertidorTemperatura(this)">
+                <option value="C">°C</option>
+                <option value="F">°F</option>
+            </select>
+        </div>
+    </div>
 
-<select id="temperatura" onchange="ConvertidorTemperatura(this)">
-    <option value="C">C</option>
-    <option value="F">F</option>
-</select>
 
         <div class="agua">
 
